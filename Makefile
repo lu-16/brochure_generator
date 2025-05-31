@@ -3,7 +3,7 @@ PROJECT_DIR=$(shell pwd)
 
 .PHONY: build run
 
-run_local:
+start:
 	streamlit run app.py --server.port 8501 --server.address 0.0.0.0
 
 build:
