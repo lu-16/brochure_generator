@@ -12,11 +12,6 @@ st.set_page_config(
 st.title(":cityscape: Apartment Brochure Generator")
 url = st.text_input("Enter apartment website URL")
 
-# if url:
-#     with st.spinner("Generating brochure..."):
-#         markdown = generate_brochure(url)
-#         st.markdown(markdown)
-
 if url:
     spinner_placeholder = st.empty()
     spinner_placeholder.markdown(
@@ -32,7 +27,7 @@ if url:
         }
         </style>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
     markdown = generate_brochure(url)
     spinner_placeholder.empty()
