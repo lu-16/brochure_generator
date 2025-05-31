@@ -2,10 +2,6 @@
 runOnSave = false
 port = 8501
 headless = true
-enableCORS = false
-
-[ui]
-layout = "wide"
 
 [theme]
 base = "light"
