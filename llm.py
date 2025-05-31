@@ -2,10 +2,22 @@ import os
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
+
+def get_secrets(key: str, default=None) -> str:
+    try:
+        import streamlit as st
+
+        if key in st.secrets:
+            return st.secrets[key]
+    except ImportError:
+        pass
+    return os.getenv(key, default)
+
+
 load_dotenv(override=True)
-api_key = os.getenv("OPENAI_KEY")
-endpoint = os.getenv("OPENAI_ENDPOINT")
-model = os.getenv("OPENAI_MODEL")
+api_key = get_secrets("OPENAI_KEY")
+endpoint = get_secrets("OPENAI_ENDPOINT")
+model = get_secrets("OPENAI_MODEL")
 
 
 class LLM:
