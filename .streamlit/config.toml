@@ -1,0 +1,16 @@
+[server]
+runOnSave = false
+port = 8501
+headless = true
+enableCORS = false
+
+[ui]
+layout = "wide"
+
+[theme]
+base = "light"
+primaryColor = "#0066cc"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f6fa"
+textColor = "#222222"
+font = "sans serif"

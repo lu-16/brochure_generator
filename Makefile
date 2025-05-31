@@ -3,6 +3,9 @@ PROJECT_DIR=$(shell pwd)
 
 .PHONY: build run
 
+run_local:
+	streamlit run app.py --server.port 8501 --server.address 0.0.0.0
+
 build:
 	docker build --platform=linux/amd64 --no-cache --build-arg DEBIAN_FRONTEND=noninteractive -t $(IMAGE_NAME) .
 
