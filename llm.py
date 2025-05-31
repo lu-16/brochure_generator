@@ -1,12 +1,10 @@
 import os
-from dotenv import load_dotenv
+import streamlit as st
 from openai import AzureOpenAI
 
 
 def get_secrets(key: str, default=None) -> str:
     try:
-        import streamlit as st
-
         if key in st.secrets:
             return st.secrets[key]
     except ImportError:
@@ -14,7 +12,6 @@ def get_secrets(key: str, default=None) -> str:
     return os.getenv(key, default)
 
 
-load_dotenv(override=True)
 api_key = get_secrets("OPENAI_KEY")
 endpoint = get_secrets("OPENAI_ENDPOINT")
 model = get_secrets("OPENAI_MODEL")
