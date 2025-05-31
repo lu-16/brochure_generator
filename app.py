@@ -5,7 +5,7 @@ from brochure import generate_brochure
 st.set_page_config(
     page_title="Apartment Brochure Generator",
     page_icon=":cityscape:",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="auto",
 )
 

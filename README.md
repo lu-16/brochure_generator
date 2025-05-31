@@ -5,6 +5,7 @@ Generate a markdown-formatted brochure for any apartment complex website—just 
 ## Overview
 
 This project scrapes the provided apartment website URL, uses an LLM (Large Language Model) to identify links relevant to apartment features (such as amenities, floorplans, gallery, etc.), and then generates a well-structured brochure based on the collected data.
+[Download demo video](demo/demo.mp4)
 
 ## Features
 

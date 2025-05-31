@@ -10,6 +10,7 @@ def _get_system_prompt():
         "Do not truncate or duplicate text. Use only the information provided. "
         "Do not invent or add information. Each section should be concise and relevant."
         "Keep relevant full url links in the content, but do not include any links to Terms of Service, Privacy Policy, or email links."
+        "Do not include any images or photos in the markdown output. Do not use markdown image syntax or embed any images."
     )
 
 
@@ -21,7 +22,7 @@ def _get_user_prompt(details):
     )
 
 
-def generate_brochure(url:str) -> str:
+def generate_brochure(url: str) -> str:
     llm = LLM()
     client, model_name = llm.client, llm.model
     system_prompt = _get_system_prompt()
